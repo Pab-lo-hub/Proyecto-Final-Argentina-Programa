@@ -16,86 +16,116 @@
 
 <body>
     <div id="app">
-    <header>
-
-    </header>
-    <div class="flex items-center justify-center mt-5">
-
-        <div class="bg-blue-900 w-1/8 p-10 h-auto">
-            <div class="flex items-center justify-center mb-10">
-                <img src="https://i.pinimg.com/originals/a8/bc/90/a8bc90ea196737604770aaf9c2d56a51.jpg" alt=""
-                    class="rounded-full w-32 border-2 border-gray-300">
+        <div class="flex items-center justify-center mt-5">
+            <ul class="flex justify-between">
+                <li class="mr-3">
+                    <a class="inline-block border border-white rounded hover:border-gray-200 text-blue-500 hover:bg-gray-200 py-2 px-4" href="#">Pill</a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex items-center justify-center mt-5">
+            <div class="bg-blue-900 w-1/8 p-10 h-auto">
+                <div class="flex items-center justify-center mb-10">
+                    <img v-bind:src="image" alt="Imagen de perfil" class="rounded-full w-32 border-2 border-gray-300" />
+                </div>
+                <h1 class="text-gray-400 uppercase tracking-widest text-lg font-bold">
+                    Datos
+                </h1>
+                <h1 class="text-gray-400 text-sm">{{ name }}</h1>
+                <h1 class="text-gray-400 text-sm">{{ email }}</h1>
+                <h1 class="text-gray-400 text-sm">{{ cell }}</h1>
+                <h1 class="text-gray-400 text-sm">{{ location }}</h1>
+                <hr class="my-5" />
+                <h1 class="text-gray-400 mt-2 uppercase tracking-widest text-lg font-bold"></h1>
+                <h1 class="text-gray-400 text-sm uppercase font-semibold tracking-wider">
+                    Diseñador - Desarrollador
+                </h1>
+                <h1 class="text-gray-500 text-sm">
+                    <span class="italic">Educación Pública</span>,
+                    <span class="text-gray-400 font-semibold italic">CABA</span> /
+                    2007-2022
+                </h1>
+                <hr class="my-5" />
+                <h1 class="text-gray-400 mt-2 uppercase tracking-widest text-lg font-bold">
+                    SKILLS
+                </h1>
+                <ul>
+                    <li class="text-gray-500 text-sm list-disc ml-4">
+                        Adobe Photoshop
+                    </li>
+                    <li class="text-gray-500 text-sm list-disc ml-4">
+                        Adobe Illustrator
+                    </li>
+                    <li class="text-gray-500 text-sm list-disc ml-4">
+                        Adobe After Effects
+                    </li>
+                    <li class="text-gray-500 text-sm list-disc ml-4">
+                        Microsoft Power Point
+                    </li>
+                    <li class="text-gray-500 text-sm list-disc ml-4">Microsoft Word</li>
+                    <li class="text-gray-500 text-sm list-disc ml-4 mb-1">
+                        Adobe InDesign
+                    </li>
+                </ul>
             </div>
-            <h1 class="text-gray-400 uppercase tracking-widest text-lg font-bold">Contact</h1>
-            <hr class="w-1/6 mb-5">
-            <h1 class="text-gray-400 text-sm"> ACA + {{ email }}</h1>
-            <h1 class="text-gray-400 text-sm"></h1>
-            <h1 class="text-gray-400 text-sm"></h1>
-            <h1 class="text-gray-400 text-sm"></h1>
-            <hr class="my-5">
-            <h1 class="text-gray-400 mt-2 uppercase tracking-widest text-lg font-bold"></h1>
-            <hr class="w-1/6 mb-5">
-            <h1 class="text-gray-400 text-sm uppercase font-semibold tracking-wider"></h1>
-            <h1 class="text-gray-500 text-sm"><span class="italic"></span>, <span
-                    class="text-gray-400 font-semibold italic"></span> / 2012-2013</h1>
-            <br>
-            <h1 class="text-gray-400 text-sm uppercase font-semibold tracking-wider">Bachelor of Arts</h1>
-            <h1 class="text-gray-500 text-sm"><span class="italic">College Name Here</span>, <span
-                    class="text-gray-400 font-semibold italic">London</span> / 2011-2012</h1>
-            <hr class="my-5">
-            <h1 class="text-gray-400 mt-2 uppercase tracking-widest text-lg font-bold">SKILLS</h1>
-            <hr class="w-1/6 mb-5">
-            <ul>
-                <li class="text-gray-500 text-sm list-disc ml-4">Adobe Photoshop</li>
-                <li class="text-gray-500 text-sm list-disc ml-4">Adobe Illustrator</li>
-                <li class="text-gray-500 text-sm list-disc ml-4">Adobe After Effects</li>
-                <li class="text-gray-500 text-sm list-disc ml-4">Microsoft Power Point</li>
-                <li class="text-gray-500 text-sm list-disc ml-4">Microsoft Word</li>
-                <li class="text-gray-500 text-sm list-disc ml-4 mb-1">Adobe InDesign</li>
-            </ul>
-        </div>
 
-        <div class="bg-white w-7/12 p-10 h-auto">
-            <h1 class="text-gray-500">A resourceful individual with a proven track record in implementing successful
-                marketing strategies, boosting organic traffic, and improving search rankings seeks a position of
-                Marketing
-                Associate at ABC company to maximize brand awareness and revenue through integrated marketing
-                communications.</h1>
-            <h1 class="font-semibold uppercase tracking-wider my-6 text-gray-500">Experience</h1>
-            <h1 class="text-gray-600 font-semibold">FullStack Developer (2018 - Present)</h1>
-            <ul class="list-disc ml-5 text-gray-500">
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            </ul>
-            <h1 class="text-gray-600 font-semibold mt-3">Sr Developer (2016 - 2-18)</h1>
-            <ul class="list-disc ml-5 text-gray-500">
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            </ul>
-            <h1 class="text-gray-600 font-semibold mt-3">Sr Developer (2016 - 2-18)</h1>
-            <ul class="list-disc ml-5 text-gray-500">
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            </ul>
-            <h1 class="text-gray-600 font-semibold mt-3">Sr Developer (2016 - 2-18)</h1>
-            <ul class="list-disc ml-5 text-gray-500">
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            </ul>
-            <h1 class="text-gray-600 font-semibold mt-3">Sr Developer (2016 - 2-18)</h1>
-            <ul class="list-disc ml-5 text-gray-500">
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            </ul>
+            <div class="bg-white w-7/12 p-10 h-auto">
+                <h1 class="text-gray-500">
+                    A resourceful individual with a proven track record in implementing
+                    successful marketing strategies, boosting organic traffic, and
+                    improving search rankings seeks a position of Marketing Associate at
+                    ABC company to maximize brand awareness and revenue through
+                    integrated marketing communications.
+                </h1>
+                <h1 class="font-semibold uppercase tracking-wider my-6 text-gray-500">
+                    Experience
+                </h1>
+                <h1 class="text-gray-600 font-semibold">
+                    FullStack Developer (2018 - Present)
+                </h1>
+                <ul class="list-disc ml-5 text-gray-500">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                </ul>
+                <h1 class="text-gray-600 font-semibold mt-3">
+                    Sr Developer (2016 - 2-18)
+                </h1>
+                <ul class="list-disc ml-5 text-gray-500">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                </ul>
+                <h1 class="text-gray-600 font-semibold mt-3">
+                    Sr Developer (2016 - 2-18)
+                </h1>
+                <ul class="list-disc ml-5 text-gray-500">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                </ul>
+                <h1 class="text-gray-600 font-semibold mt-3">
+                    Sr Developer (2016 - 2-18)
+                </h1>
+                <ul class="list-disc ml-5 text-gray-500">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                </ul>
+                <h1 class="text-gray-600 font-semibold mt-3">
+                    Sr Developer (2016 - 2-18)
+                </h1>
+                <ul class="list-disc ml-5 text-gray-500">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                </ul>
+            </div>
         </div>
     </div>
-    </div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js" integrity="sha512-L4lHq2JI/GoKsERT8KYa72iCwfSrKYWEyaBxzJeeITM9Lub5vlTj8tufqYk056exhjo2QDEipJrg6zen/DDtoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js"
+        integrity="sha512-L4lHq2JI/GoKsERT8KYa72iCwfSrKYWEyaBxzJeeITM9Lub5vlTj8tufqYk056exhjo2QDEipJrg6zen/DDtoQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="../js/index.js"></script>
 </body>
