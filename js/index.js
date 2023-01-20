@@ -1,59 +1,18 @@
-/**
-$.ajax({
-  url: 'https://randomuser.me/api/',
-  dataType: 'json',
-  success: function (data) {
-    console.log(data);
-    let persona = data.results[0];
-    console.log(persona);
-  }
-});
-*/
-
-
-const app = Vue.createApp({
-  data() {
-    return {
-      email: "HARDCODEADO",
-    }
-  },
-  methods: {
-    getDataFromRandomUser: function () {
-      $.ajax({
-        url: 'https://randomuser.me/api/',
-        dataType: 'json',
-        success: function (data) {
-          console.log(data);
-          let persona = data.results[0];
-          console.log(persona);
-          this.email = persona.email;
-        }
-      });
-    }
-  }
-})
-
-const { createApp } = Vue
-
+const { createApp } = Vue;
+const url =  'https://randomuser.me/api/';
   createApp({
     data() {
       return {
-        message: 'Hello Vue!',
-        email: "HARDCODEADO",
+        email: "",
       }
     },
-    methods: {
-      getDataFromRandomUser: function () {
-        $.ajax({
-          url: 'https://randomuser.me/api/',
-          dataType: 'json',
-          success: function (data) {
-            console.log(data);
-            let persona = data.results[0];
-            console.log(persona);
-            email = persona.email;
-          }
-        });
-      }
+    mounted() {
+      axios
+              .get(url)
+              .then(response => {
+              this.results = response.data
+              console.log(this.results.results[0].email);
+              this.email = this.results.results[0].email;
+              })
     }
-  }).mount('#app2')
+  }).mount('#app')
